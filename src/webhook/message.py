@@ -1,10 +1,13 @@
 from discord_webhook import DiscordEmbed, DiscordWebhook
 from decouple import config
+from datetime import datetime,date
+from ..utils.get_webhok_urls import get_webhook_url
+
 
 class JobWebHook:
     def send_message(title: str, requirements: str, stack: str, link: str):
-        url = ''
-        descritpion = ''
+        url = get_webhook_url(stack=stack)
+        descritpion = f'{title} - {date.today()} - {datetime.now().hour}:{datetime.now().minute}'
         
         webhook = DiscordWebhook(url=url)
         msg = DiscordEmbed(title='VAGA', description=descritpion, color='03b2f8')
