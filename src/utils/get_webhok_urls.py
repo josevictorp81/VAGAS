@@ -25,4 +25,6 @@ def get_webhook_url(stack: str):
         return config('WEBHOOK_GO_URL')
     if stack == 'flutter':
         return config('WEBHOOK_FLUTTER_URL')
+    if stack == 'DevOps':
+        return config('WEBHOOK_DEVOPS_URL')
         
