@@ -20,6 +20,11 @@ def test_return_node():
     assert verify_stack_back(title='Fullstack NodeJS Dev Jr - Whats') == 'node'
 
 
+def test_return_go():
+    """ test return go/golang label """
+    assert verify_stack_back(title='Fullstack go - Whats') == 'go'
+
+
 def test_return_no_label():
     """ test return no label """
     assert verify_stack_back(title='Fullstack developer Java Sênior - Tecnologia Única') == 'Nâo mencionada no título da vaga! - Back'
