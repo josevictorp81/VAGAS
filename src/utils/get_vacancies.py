@@ -16,7 +16,7 @@ def get_list_vancancie(content, stack: str):
         if month == datetime.now().month and int(date_posted[1]) == datetime.now().day:
             title = vacancie.find('a', attrs={'class': 'Link--primary v-align-middle no-underline h4 js-navigation-open markdown-title'})
             requirements = vacancie.find('span', attrs={'class': 'lh-default d-block d-md-inline'})
-            requirements = requirements.text.replace('\n\n\n', '').strip()
+            requirements = requirements.text.replace('\n\n\n', '').strip() if requirements else 'Sem subtítulo'
             link = 'https://github.com' + title['href']
             if stack == 'back no label':
                 stack_label = verify_stack_back(title=title.text)

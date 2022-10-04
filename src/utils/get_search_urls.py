@@ -13,4 +13,6 @@ def get_search_url(stack: str) -> str:
         return config('SEARCH_JOBS_BACK_NO_LABEL')
     if stack == 'frontend':
         return config('SEARCH_FRONTEND_URL')
+    if stack == 'flutter':
+        return config('SEARCH_FLUTTER_URL')
 

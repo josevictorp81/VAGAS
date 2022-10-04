@@ -19,7 +19,10 @@ def get_webhook_url(stack: str):
         return config('WEBHOOK_VUE_URL')
     if stack == 'angular':
         return config('WEBHOOK_ANGULAR_URL')
-    if stack == 'go':
-        return config('WEBHOOK_GO_URL')
     if stack == 'Nâo mencionada no título da vaga! - Front':
         return config('WEBHOOK_FRONT_NO_STACK_URL')
+    if stack == 'go':
+        return config('WEBHOOK_GO_URL')
+    if stack == 'flutter':
+        return config('WEBHOOK_FLUTTER_URL')
+        
