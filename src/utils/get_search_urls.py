@@ -11,4 +11,6 @@ def get_search_url(stack: str) -> str:
         return config('SEARCH_RUBY_URL')
     if stack == 'back no label':
         return config('SEARCH_JOBS_BACK_NO_LABEL')
+    if stack == 'frontend':
+        return config('SEARCH_FRONTEND_URL')
 

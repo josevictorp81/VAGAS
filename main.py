@@ -5,7 +5,9 @@ class Main:
         # BaseSearch.search_jobs(stack='django')
         # BaseSearch.search_jobs(stack='node')
         # BaseSearch.search_jobs(stack='ruby')
-        BaseSearch.search_jobs(stack='back no label')
+        # BaseSearch.search_jobs(stack='.net')
+        # BaseSearch.search_jobs(stack='back no label')
+        BaseSearch.search_jobs(stack='frontend')
         print(True)
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@ def get_webhook_url(stack: str):
         return config('WEBHOOK_REACT_NATIVE_URL')
     if stack == 'react':
         return config('WEBHOOK_REACT_URL')
-    if stack == 'Vue':
+    if stack == 'vue':
         return config('WEBHOOK_VUE_URL')
     if stack == 'angular':
         return config('WEBHOOK_ANGULAR_URL')
