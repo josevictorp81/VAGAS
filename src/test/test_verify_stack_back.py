@@ -54,3 +54,8 @@ def test_return_agular():
 def test_return_no_label_title():
     """ test return no title label """
     assert verify_stack_front(title='Fullstack developer Pleno') == 'Nâo mencionada no título da vaga! - Front'
+
+
+def test_return_ios_label():
+    """ test return no ios label """
+    assert verify_stack_back(title='IOS developer Pleno') == 'ios'

@@ -27,4 +27,6 @@ def get_webhook_url(stack: str):
         return config('WEBHOOK_FLUTTER_URL')
     if stack == 'DevOps':
         return config('WEBHOOK_DEVOPS_URL')
+    if stack == 'ios':
+        return config('WEBHOOK_IOS_URL')
         

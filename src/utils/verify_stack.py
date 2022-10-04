@@ -11,6 +11,8 @@ def verify_stack_back(title: str) -> str:
         return 'ruby'
     if re.search('go', title.lower()) or re.search('golang', title.lower()):
         return 'go'
+    if re.search('ios', title.lower()):
+        return 'ios'
     else:
         return 'Nâo mencionada no título da vaga! - Back'
 
