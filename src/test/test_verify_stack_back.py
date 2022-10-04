@@ -1,4 +1,4 @@
-from ..utils.verify_stack import verify_stack_back
+from ..utils.verify_stack import verify_stack_back, verify_stack_front
 
 def test_return_python():
     """ test return python label """
@@ -29,3 +29,28 @@ def test_return_no_label():
     """ test return no label """
     assert verify_stack_back(title='Fullstack developer Java Sênior - Tecnologia Única') == 'Nâo mencionada no título da vaga! - Back'
     assert verify_stack_back(title='Fullstack NodeJS Dev Jr - Whats') != 'Nâo mencionada no título da vaga! - Back'
+
+
+def test_return_reat_native():
+    """ test return react native label """
+    assert verify_stack_front(title='React-native developer Sênior') == 'react native'
+
+
+def test_return_reat():
+    """ test return react label """
+    assert verify_stack_front(title='React developer Pleno') == 'react'
+
+
+def test_return_vue():
+    """ test return vue label """
+    assert verify_stack_front(title='Vue.js developer Pleno') == 'vue'
+
+
+def test_return_agular():
+    """ test return agular label """
+    assert verify_stack_front(title='Angular developer Pleno') == 'angular'
+
+
+def test_return_no_label_title():
+    """ test return no title label """
+    assert verify_stack_front(title='Fullstack developer Pleno') == 'Nâo mencionada no título da vaga! - Front'

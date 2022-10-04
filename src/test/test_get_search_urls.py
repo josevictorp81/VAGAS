@@ -30,3 +30,18 @@ def test_return_no_label_url():
     """ test return search no label url """
     assert get_search_url(stack='back no label') == config('SEARCH_JOBS_BACK_NO_LABEL')
     assert get_search_url(stack='back no label') != config('SEARCH_RUBY_URL')
+
+
+def test_return_frontend_url():
+    """ test return search frontend url """
+    assert get_search_url(stack='frontend') == config('SEARCH_FRONTEND_URL')
+
+
+def test_return_flutter_url():
+    """ test return search flutter url """
+    assert get_search_url(stack='flutter') == config('SEARCH_FLUTTER_URL')
+
+
+def test_return_devops_url():
+    """ test return search DevOps url """
+    assert get_search_url(stack='DevOps') == config('SEARCH_DEVOPS_URL')
