@@ -1,4 +1,5 @@
 from src.utils.get_search_urls import get_search_url
+from src.utils.save_name_job import save_job_name
 from .get_list_job import get_list_vancancie
 from src.request.requests import Requests
 from src.request.soup import BeautifulSoup
@@ -13,5 +14,7 @@ class BaseSearch:
         
         data_list = get_list_vancancie(content=content, stack=stack)
 
-        for data in data_list:
-            JobWebHook.send_message(title=data['title'], requirements=data['requirements'], stack=data['stack'], link=data['link'])    
+        data = save_job_name(data_list)
+
+        for d in data:
+            JobWebHook.send_message(title=d['title'], requirements=d['requirements'], stack=d['stack'], link=d['link'])    

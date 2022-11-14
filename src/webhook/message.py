@@ -20,3 +20,5 @@ class JobWebHook:
             return True
         except:
             return False
+        finally:
+            print('Mesagem enviada!')
