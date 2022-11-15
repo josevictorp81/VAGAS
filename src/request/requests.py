@@ -14,3 +14,4 @@ class Requests:
 
     def get(self):
         return self.__requests.get(url=self.__url, headers=HEADERS)
+        

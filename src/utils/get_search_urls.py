@@ -21,4 +21,3 @@ def get_search_url(stack: str) -> str:
         return config('SEARCH_IOS_URL')
     if stack == 'data-science':
         return config('SEARCH_DATA_SCIENCE_URL')
-

@@ -15,7 +15,6 @@ def save_job_name(data: list) -> list:
         if not exists:
             with open(f'{path}/jobs.txt', 'a+') as file:
                 file.write(f'{d["title"]}\n')
-            
             new_data.append(d)
     
     return new_data

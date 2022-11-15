@@ -25,3 +25,4 @@ def get_list_jobs(content, stack: str):
             data.append({'title': title.text, 'requirements': requirements, 'link': link, 'stack': stack_label})
         
     return data
+    
