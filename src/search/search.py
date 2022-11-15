@@ -1,6 +1,6 @@
 from src.utils.get_search_urls import get_search_url
 from src.utils.save_name_job import save_job_name
-from .get_list_job import get_list_vancancie
+from .get_list_job import get_list_jobs
 from src.request.requests import Requests
 from src.request.soup import BeautifulSoup
 from src.webhook.message import JobWebHook
@@ -12,7 +12,7 @@ class BaseSearch:
         res = Requests(url=url).get()
         content = BeautifulSoup.parser(html_doc=res.content)
         
-        data_list = get_list_vancancie(content=content, stack=stack)
+        data_list = get_list_jobs(content=content, stack=stack)
 
         data = save_job_name(data_list)
 

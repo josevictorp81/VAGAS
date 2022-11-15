@@ -2,7 +2,7 @@ from datetime import datetime
 from src.utils.convert_month import convert_month_str_to_int
 from src.utils.verify_stack import verify_stack_back, verify_stack_front
 
-def get_list_vancancie(content, stack: str):
+def get_list_jobs(content, stack: str):
     vacancies = content.find_all('div', attrs={'class': 'flex-auto min-width-0 p-2 pr-3 pr-md-2'})
     vacancies.reverse()
     data = []
