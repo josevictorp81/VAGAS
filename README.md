@@ -14,7 +14,7 @@ Para executar, primeiro deve-se criar e ativar um ambiente virtual, e executar o
 pip3 install -r requirements.txt
 ```
 
--   Executar script principal
+-   Executar script principal, resposável pela buscar e armazenar em um arquivo _jobs.txt_
 
 ```
 python3 main.py
