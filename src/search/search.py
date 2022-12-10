@@ -1,8 +1,8 @@
 from src.utils.get_search_urls import get_search_url
 from src.utils.save_name_job import save_job_name
 from .get_list_job import get_list_jobs
-from src.request.requests import Requests
-from src.request.soup import BeautifulSoup
+from src.adapters.requests import Requests
+from src.adapters.soup import BeautifulSoup
 from src.webhook.message import JobWebHook
 
 class BaseSearch:
