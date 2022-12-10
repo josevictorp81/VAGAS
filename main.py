@@ -12,6 +12,7 @@ class Main:
         BaseSearch.search_jobs(stack='DevOps')
         BaseSearch.search_jobs(stack='iOS')
         BaseSearch.search_jobs(stack='data-science')
+        BaseSearch.search_jobs(stack='java')
         print(True)
 
 if __name__ == '__main__':

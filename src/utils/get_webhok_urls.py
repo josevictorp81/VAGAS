@@ -31,4 +31,6 @@ def get_webhook_url(stack: str):
         return config('WEBHOOK_IOS_URL')
     if stack == 'data-science':
         return config('WEBHOOK_DATA_SCIENCE_URL')
+    if stack == 'java':
+        return config('WEBHOOK_JAVA_URL')
         
