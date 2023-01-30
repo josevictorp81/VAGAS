@@ -5,8 +5,8 @@ from src.utils.get_webhok_urls import get_webhook_url
 
 
 class JobWebHook:
-    def send_message(title: str, requirements: str, stack: str, link: str):
-        url = get_webhook_url(stack=stack)
+    async def send_message(title: str, requirements: str, stack: str, link: str):
+        url = await get_webhook_url(stack=stack)
         descritpion = f'{title} - {date.today()} - {datetime.now().hour}:{datetime.now().minute}'
 
         webhook = DiscordWebhook(url=url)

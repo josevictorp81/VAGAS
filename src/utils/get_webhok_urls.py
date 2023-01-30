@@ -1,6 +1,6 @@
 from decouple import config
 
-def get_webhook_url(stack: str):
+async def get_webhook_url(stack: str):
     if stack == 'django' or stack == 'python':
         return config('WEBHOOK_PYTHON_URL')
     if stack == 'node':
