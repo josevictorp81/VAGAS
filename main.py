@@ -17,6 +17,7 @@ async def main() -> None:
         BaseSearch.search_jobs(stack='iOS'),
         BaseSearch.search_jobs(stack='data-science'),
         BaseSearch.search_jobs(stack='java'),
+        BaseSearch.search_jobs(stack='ui-ux'),
     )
     print(f'end: ', end=' ')
     print(time.strftime('%X'))
