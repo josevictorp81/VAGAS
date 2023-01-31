@@ -1,6 +1,6 @@
 import re
 
-def verify_stack_back(title: str) -> str:
+async def verify_stack_back(title: str) -> str:
     if re.search('.net', title.lower()) or re.search('C#', title.upper()) or re.search('dotnet', title.lower()):
         return '.net'
     if re.search('python', title.lower()) or re.search('fastapi', title.lower()) or re.search('django', title.lower()):
@@ -17,7 +17,7 @@ def verify_stack_back(title: str) -> str:
         return 'Nâo mencionada no título da vaga! - Back'
 
 
-def verify_stack_front(title: str) -> str:
+async def verify_stack_front(title: str) -> str:
     if re.search('react-native', title.lower()) or re.search('react native', title.lower()):
         return 'react native'
     if re.search('react', title.lower()):

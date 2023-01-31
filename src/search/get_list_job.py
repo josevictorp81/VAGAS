@@ -11,7 +11,7 @@ async def get_list_jobs(content, stack: str):
         posted = vacancie.find('relative-time', attrs={'class': 'no-wrap'})
         date_posted = posted.text.replace(',', '').split(' ')
         
-        month = convert_month_str_to_int(date_posted[0])
+        month = await convert_month_str_to_int(date_posted[0])
 
         if month == datetime.now().month and int(date_posted[1]) == datetime.now().day:
             title = vacancie.find('a', attrs={'class': 'Link--primary v-align-middle no-underline h4 js-navigation-open markdown-title'})
@@ -19,9 +19,9 @@ async def get_list_jobs(content, stack: str):
             requirements = requirements.text.replace('\n\n\n', '').strip() if requirements else 'Sem subtítulo'
             link = 'https://github.com' + title['href']
             if stack == 'back no label':
-                stack_label = verify_stack_back(title=title.text)
+                stack_label = await verify_stack_back(title=title.text)
             if stack == 'frontend':
-                stack_label = verify_stack_front(title=title.text)
+                stack_label = await verify_stack_front(title=title.text)
             data.append({'title': title.text, 'requirements': requirements, 'link': link, 'stack': stack_label})
         
     return data
