@@ -13,6 +13,8 @@ async def verify_stack_back(title: str) -> str:
         return 'go'
     if re.search('ios', title.lower()):
         return 'ios'
+    if re.search('devops', title.lower()):
+        return 'DevOps'
     else:
         return 'Nâo mencionada no título da vaga! - Back'
 
@@ -26,5 +28,7 @@ async def verify_stack_front(title: str) -> str:
         return 'vue'
     if re.search('angular', title.lower()):
         return 'angular'
+    if re.search('ui', title.lower()) or re.search('ux', title.lower()) or re.search('designer', title.lower()):
+        return 'ui-ux'
     else:
         return 'Nâo mencionada no título da vaga! - Front'
