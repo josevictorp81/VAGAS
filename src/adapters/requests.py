@@ -12,6 +12,6 @@ class Requests:
         self.__requests = requests
         self.__url = url
 
-    def get(self):
+    async def get(self):
         return self.__requests.get(url=self.__url, headers=HEADERS)
         
