@@ -2,7 +2,7 @@
 
 Este é um BOT de vagas, scraping que tem como objetivo buscar por vagas para desenvolvedores, estas, são listadas em alguns repositórios do GitHub.
 
-Durante a busca, as informações trazidas são as seguintes: o título, o link para acessar no repositíorio e os requisitos para a vaga. Após a buscas, essas informações são enviadas via webhook para canais específicos em um servidor no discord.
+Durante a busca, as informações obtidas são as seguintes: o título da vaga, o link para acessar no repositório e os requisitos para a vaga. Após a busca, essas informações são enviadas via webhook para canais específicos em um servidor no discord.
 
 ### Executar
 
