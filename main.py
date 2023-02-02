@@ -3,8 +3,7 @@ import asyncio
 import time
 
 async def main() -> None:
-    print(f'start: ', end=' ')
-    print(time.strftime('%X'))
+    print(f'start: {time.strftime("%X")}')
     await asyncio.gather(
         BaseSearch.search_jobs(stack='django'),
         BaseSearch.search_jobs(stack='node'),
@@ -19,9 +18,8 @@ async def main() -> None:
         BaseSearch.search_jobs(stack='java'),
         BaseSearch.search_jobs(stack='ui-ux'),
     )
-    print(f'end: ', end=' ')
-    print(time.strftime('%X'))
-    print(True)
+    print(f'end: {time.strftime("%X")}')
+
 
 if __name__ == '__main__':
     asyncio.run(main())
