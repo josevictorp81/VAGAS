@@ -1,11 +1,12 @@
 from pathlib import Path
 import time
+from datetime import date
 
 path = Path()
 
 async def register_search_hour() -> None:
      with open(f'{path}/jobs.txt', 'a+') as file:
-        file.write(f'HORA DA BUSCA: {time.strftime("%X")}\n')
+        file.write(f'HORA DA BUSCA: {date.today()} {time.strftime("%X")}\n')
 
 
 async def exists_job_name(name: str) -> bool:
