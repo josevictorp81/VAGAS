@@ -25,3 +25,5 @@ def get_search_url(stack: str) -> str:
         return config('SEARCH_JAVA_URL')
     if stack == 'ui-ux':
         return config('SEARCH_UI_UX_URL')
+    if stack == 'react':
+        return config('SEARCH_REACT_URL')

@@ -20,7 +20,7 @@ async def get_list_jobs(content, stack: str):
             link = 'https://github.com' + title['href']
             if stack == 'back no label':
                 stack_label = await verify_stack_back(title=title.text)
-            if stack == 'frontend':
+            if stack == 'frontend' or stack == 'react':
                 stack_label = await verify_stack_front(title=title.text)
             data.append({'title': title.text, 'requirements': requirements, 'link': link, 'stack': stack_label})
         
