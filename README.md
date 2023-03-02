@@ -6,21 +6,27 @@ Durante a busca, as informações obtidas são as seguintes: o título da vaga, 
 
 ### Executar
 
-Para executar, primeiro deve-se criar e ativar um ambiente virtual, e executar os seguintes comandos:
+Para execução, siga os seguintes comandos:
 
--   Instalar as dependências
+- Criar e ativar um ambiente virtual
+
+```
+python3 -m venv venv && source venv/bin/activate
+```
+
+- Instalar as dependências
 
 ```
 pip3 install -r requirements.txt
 ```
 
--   Executar script principal, resposável pela buscar e armazenar em um arquivo _jobs.txt_
+- Executar script principal, resposável por buscar e armazenar em um arquivo _jobs.txt_
 
 ```
 python3 main.py
 ```
 
--   Executar script que limpa os dados salvos no arquivo _jobs.py_
+- Executar script que limpa os dados salvos no arquivo _jobs.py_
 
 ```
 python3 delete.py
