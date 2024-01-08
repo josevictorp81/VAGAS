@@ -1,5 +1,6 @@
 from decouple import config
 
+
 def get_search_url(stack: str) -> str:
     if stack == 'django':
         return config('SEARCH_DJANGO_URL')

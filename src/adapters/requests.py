@@ -7,6 +7,7 @@ HEADERS = {
     'connection': 'close'
 }
 
+
 class Requests:
     def __init__(self, url: str) -> None:
         self.__requests = requests
@@ -14,4 +15,3 @@ class Requests:
 
     async def get(self):
         return self.__requests.get(url=self.__url, headers=HEADERS)
-        

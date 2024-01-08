@@ -4,10 +4,11 @@ import time
 
 from src.utils.save_name_job import register_search_hour
 
+
 async def main() -> None:
     print(f'start: {time.strftime("%X")}')
     await register_search_hour()
-    
+
     await asyncio.gather(
         BaseSearch.search_jobs(stack='django'),
         BaseSearch.search_jobs(stack='node'),

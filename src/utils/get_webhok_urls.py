@@ -1,5 +1,6 @@
 from decouple import config
 
+
 async def get_webhook_url(stack: str):
     if stack == 'django' or stack == 'python':
         return config('WEBHOOK_PYTHON_URL')
@@ -35,4 +36,3 @@ async def get_webhook_url(stack: str):
         return config('WEBHOOK_JAVA_URL')
     if stack == 'ui-ux':
         return config('WEBHOOK_UI_UX_URL')
-        

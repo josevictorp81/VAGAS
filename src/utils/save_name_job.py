@@ -4,8 +4,9 @@ from datetime import date
 
 path = Path()
 
+
 async def register_search_hour() -> None:
-     with open(f'{path}/jobs.txt', 'a+') as file:
+    with open(f'{path}/jobs.txt', 'a+') as file:
         file.write(f'HORA DA BUSCA: {date.today()} {time.strftime("%X")}\n')
 
 
@@ -23,5 +24,5 @@ async def save_job_name(data: list) -> list:
             with open(f'{path}/jobs.txt', 'a+') as file:
                 file.write(f' - {d["title"]}\n')
             new_data.append(d)
-    
+
     return new_data

@@ -1,5 +1,6 @@
 import re
 
+
 async def verify_stack_back(title: str) -> str:
     if re.search('.net', title.lower()) or re.search('C#', title.upper()) or re.search('dotnet', title.lower()):
         return '.net'
@@ -15,6 +16,8 @@ async def verify_stack_back(title: str) -> str:
         return 'ios'
     if re.search('devops', title.lower()):
         return 'DevOps'
+    if re.search('java', title.lower()):
+        return 'java'
     else:
         return 'Nâo mencionada no título da vaga! - Back'
 
