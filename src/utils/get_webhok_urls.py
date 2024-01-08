@@ -1,38 +1,26 @@
 from decouple import config
 
+STACKS_URLS: dict = {
+    'django': config('WEBHOOK_PYTHON_URL'),
+    'python': config('WEBHOOK_PYTHON_URL'),
+    'node': config('WEBHOOK_NODE_URL'),
+    '.net': config('WEBHOOK_NET_URL'),
+    'ruby': config('WEBHOOK_RUBY_URL'),
+    'Nâo mencionada no título da vaga! - Back': config('WEBHOOK_BACK_NO_STACK_URL'),
+    'react native': config('WEBHOOK_REACT_NATIVE_URL'),
+    'react': config('WEBHOOK_REACT_URL'),
+    'vue': config('WEBHOOK_VUE_URL'),
+    'angular': config('WEBHOOK_ANGULAR_URL'),
+    'Nâo mencionada no título da vaga! - Front': config('WEBHOOK_FRONT_NO_STACK_URL'),
+    'go': config('WEBHOOK_GO_URL'),
+    'flutter': config('WEBHOOK_FLUTTER_URL'),
+    'DevOps': config('WEBHOOK_DEVOPS_URL'),
+    'ios': config('WEBHOOK_IOS_URL'),
+    'data-science': config('WEBHOOK_DATA_SCIENCE_URL'),
+    'java': config('WEBHOOK_JAVA_URL'),
+    'ui-ux': config('WEBHOOK_UI_UX_URL')
+}
+
 
 async def get_webhook_url(stack: str):
-    if stack == 'django' or stack == 'python':
-        return config('WEBHOOK_PYTHON_URL')
-    if stack == 'node':
-        return config('WEBHOOK_NODE_URL')
-    if stack == '.net':
-        return config('WEBHOOK_NET_URL')
-    if stack == 'ruby':
-        return config('WEBHOOK_RUBY_URL')
-    if stack == 'Nâo mencionada no título da vaga! - Back':
-        return config('WEBHOOK_BACK_NO_STACK_URL')
-    if stack == 'react native':
-        return config('WEBHOOK_REACT_NATIVE_URL')
-    if stack == 'react':
-        return config('WEBHOOK_REACT_URL')
-    if stack == 'vue':
-        return config('WEBHOOK_VUE_URL')
-    if stack == 'angular':
-        return config('WEBHOOK_ANGULAR_URL')
-    if stack == 'Nâo mencionada no título da vaga! - Front':
-        return config('WEBHOOK_FRONT_NO_STACK_URL')
-    if stack == 'go':
-        return config('WEBHOOK_GO_URL')
-    if stack == 'flutter':
-        return config('WEBHOOK_FLUTTER_URL')
-    if stack == 'DevOps':
-        return config('WEBHOOK_DEVOPS_URL')
-    if stack == 'ios':
-        return config('WEBHOOK_IOS_URL')
-    if stack == 'data-science':
-        return config('WEBHOOK_DATA_SCIENCE_URL')
-    if stack == 'java':
-        return config('WEBHOOK_JAVA_URL')
-    if stack == 'ui-ux':
-        return config('WEBHOOK_UI_UX_URL')
+    return STACKS_URLS.get(stack)

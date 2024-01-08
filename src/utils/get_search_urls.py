@@ -1,30 +1,21 @@
 from decouple import config
 
+SEARCH_URLS: dict = {
+    'django': config('SEARCH_DJANGO_URL'),
+    'node': config('SEARCH_NODE_URL'),
+    '.net': config('SEARCH_NET_URL'),
+    'ruby': config('SEARCH_RUBY_URL'),
+    'back no label': config('SEARCH_JOBS_BACK_NO_LABEL'),
+    'frontend': config('SEARCH_FRONTEND_URL'),
+    'flutter': config('SEARCH_FLUTTER_URL'),
+    'DevOps': config('SEARCH_DEVOPS_URL'),
+    'iOS': config('SEARCH_IOS_URL'),
+    'data-science': config('SEARCH_DATA_SCIENCE_URL'),
+    'java': config('SEARCH_JAVA_URL'),
+    'ui-ux': config('SEARCH_UI_UX_URL'),
+    'react': config('SEARCH_REACT_URL')
+}
+
 
 def get_search_url(stack: str) -> str:
-    if stack == 'django':
-        return config('SEARCH_DJANGO_URL')
-    if stack == 'node':
-        return config('SEARCH_NODE_URL')
-    if stack == '.net':
-        return config('SEARCH_NET_URL')
-    if stack == 'ruby':
-        return config('SEARCH_RUBY_URL')
-    if stack == 'back no label':
-        return config('SEARCH_JOBS_BACK_NO_LABEL')
-    if stack == 'frontend':
-        return config('SEARCH_FRONTEND_URL')
-    if stack == 'flutter':
-        return config('SEARCH_FLUTTER_URL')
-    if stack == 'DevOps':
-        return config('SEARCH_DEVOPS_URL')
-    if stack == 'iOS':
-        return config('SEARCH_IOS_URL')
-    if stack == 'data-science':
-        return config('SEARCH_DATA_SCIENCE_URL')
-    if stack == 'java':
-        return config('SEARCH_JAVA_URL')
-    if stack == 'ui-ux':
-        return config('SEARCH_UI_UX_URL')
-    if stack == 'react':
-        return config('SEARCH_REACT_URL')
+    return SEARCH_URLS.get(stack)
