@@ -11,6 +11,7 @@ async def main() -> None:
 
     await asyncio.gather(
         BaseSearch.search_jobs(stack='django'),
+        BaseSearch.search_jobs(stack='python'),
         BaseSearch.search_jobs(stack='node'),
         BaseSearch.search_jobs(stack='ruby'),
         BaseSearch.search_jobs(stack='.net'),

@@ -16,7 +16,6 @@ class BaseSearch:
         data_list = await get_list_jobs(content=content, stack=stack)
 
         data = await save_job_name(data_list)
-        # print(f'{stack} - {data}')
 
         for d in data:
             await JobWebHook.send_message(title=d['title'], requirements=d['requirements'], stack=d['stack'], link=d['link'])

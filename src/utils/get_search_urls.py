@@ -2,6 +2,7 @@ from decouple import config
 
 SEARCH_URLS: dict = {
     'django': config('SEARCH_DJANGO_URL'),
+    'python': config('SEARCH_PYTHON_URL'),
     'node': config('SEARCH_NODE_URL'),
     '.net': config('SEARCH_NET_URL'),
     'ruby': config('SEARCH_RUBY_URL'),
